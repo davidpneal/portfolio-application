@@ -1,0 +1,36 @@
+<!-- 7/24/2019 -->
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Fortune of the Day</title>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Fortune of the Day</a>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('addfortune') }}">Add a Fortune</a>
+            <a href="{{ url_for('about') }}">About</a>
+        </nav>
+        <hr>
+    </header>
+    <!-- Display any flash messages at the top of the page -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <div>
+                    <li>{{ message }}</li>
+                </div>
+            {% endfor%}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <!-- This section will be overridden by the child template -->
+    {% block content %}{% endblock %}
+</body>
+</html>

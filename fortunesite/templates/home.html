@@ -1,0 +1,11 @@
+<!-- 7/24/2019 -->
+<!-- Needs to be rewritten to display a fortune -->
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p> By {{ post.author }} on {{ post.date }}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+{% endblock content %}
