@@ -1,11 +1,8 @@
-<!-- 7/24/2019 -->
-<!-- Needs to be rewritten to display a fortune -->
+<!-- 7/25/2019 -->
 {% extends "layout.html" %}
 
 {% block content %}
-    {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p> By {{ post.author }} on {{ post.date }}</p>
-        <p>{{ post.content }}</p>
-    {% endfor %}
+    <p>{{ fortune }}</p>
+    <br>
+    <a href="{{ url_for('home') }}"><button>Get a different fortune</button></a>
 {% endblock content %}
