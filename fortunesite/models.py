@@ -1,4 +1,4 @@
-#7/24/2019
+#7/26/2019
 from fortunesite import db
 
 
@@ -7,4 +7,4 @@ class Fortune(db.Model):
     content = db.Column(db.Text, nullable=False)
 
     def __repr__(self):
-        return f"Fortune('{self.content}')"
+        return f"{self.content}"

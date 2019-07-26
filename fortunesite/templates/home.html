@@ -1,7 +1,9 @@
-<!-- 7/25/2019 -->
+<!-- 7/26/2019 -->
 {% extends "layout.html" %}
 
 {% block content %}
+    <h2>Welcome to the Fortune of the Day website!</h3>
+    <h4>Your fortune is:</h4>
     <p>{{ fortune }}</p>
     <br>
     <a href="{{ url_for('home') }}"><button>Get a different fortune</button></a>
